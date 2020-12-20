@@ -1,0 +1,14 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jirabot
+  namespace: demo
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  template:
+    spec:
+      containers:
+      - name: app
+        image: tlnd-docker-at/talend/internal-utils/talend-slack-bots/jirabot:0.0.2
