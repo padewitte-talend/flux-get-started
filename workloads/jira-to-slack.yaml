@@ -21,3 +21,7 @@ spec:
       - name: jirabotd
         image: localhost:5000/tlnd-docker-dev/talend/management-console/tmc-qa/talend-slack-bots/jirabot:0.0.3
         imagePullPolicy: IfNotPresent
+        ports:
+          - name: http
+            containerPort: 8080
+            protocol: TCP
