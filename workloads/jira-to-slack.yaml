@@ -37,7 +37,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    namespace: demo
     app: jirabot
   sessionAffinity: None
   type: LoadBalancer
