@@ -27,7 +27,16 @@ spec:
           protocol: TCP
         env:
         - name: WELCOME_MESSAGE
-          value: "Welcome JiraToSlack from flux env"
+          valueFrom:
+            secretKeyRef:
+              name: jira-to-slack
+              key: welcome-message
+        - name: MANAGED_PROJECTS
+          value: "tpops,tpsvc"
+        - name: TPOPS_INITIAL_USERSID_LIST
+          value: "U01EXT4T5HA"
+        - name: TPSVC_INITIAL_USERSID_LIST
+          value: "U01EXT4T5HA"
 ---
 apiVersion: v1
 kind: Service
