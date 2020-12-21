@@ -19,5 +19,5 @@ spec:
     spec:
       containers:
       - name: jirabotd
-        image: localhost:5001/tlnd-docker-at/talend/internal-utils/talend-slack-bots/jirabot:0.0.2
+        image: localhost:5000/tlnd-docker-at/talend/internal-utils/talend-slack-bots/jirabot:0.0.2
         imagePullPolicy: IfNotPresent
