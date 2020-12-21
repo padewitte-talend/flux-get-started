@@ -25,19 +25,5 @@ spec:
         - name: http
           containerPort: 5000
           protocol: TCP
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: registry
-  name: registry
-spec:
-  selector:
-    app: registry
-  ports:
-  - name: default
-    protocol: TCP
-    port: 5000
-    targetPort: 5000
+
 
