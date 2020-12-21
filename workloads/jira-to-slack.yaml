@@ -31,6 +31,11 @@ spec:
             secretKeyRef:
               name: jira-to-slack
               key: welcome-message
+        - name: SLACK_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: jira-to-slack
+              key: slack-bot-token
         - name: MANAGED_PROJECTS
           value: "tpops,tpsvc"
         - name: TPOPS_INITIAL_USERSID_LIST
