@@ -27,10 +27,7 @@ spec:
           protocol: TCP
         env:
         - name: WELCOME_MESSAGE
-          valueFrom:
-            secretKeyRef:
-              name: jira-to-slack
-              key: welcome-message
+          value: "From subfolder"
         - name: SLACK_BOT_TOKEN
           valueFrom:
             secretKeyRef:
