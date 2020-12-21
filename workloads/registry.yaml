@@ -29,17 +29,17 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: registry
-    namespace: demo
-  name: registry
+  name: registry-lb
+  namespace: demo
 spec:
-  selector:
-    namespace: demo
-    app: registry
+  clusterIP: 10.100.7.168
+  externalTrafficPolicy: Cluster
   ports:
-  - name: default
-    protocol: TCP
+  - nodePort: 32604
     port: 5000
-    targetPort: http
-
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: registry
+  sessionAffinity: None
+  type: LoadBalancer
