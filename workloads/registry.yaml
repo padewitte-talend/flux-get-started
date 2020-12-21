@@ -25,5 +25,21 @@ spec:
         - name: http
           containerPort: 5000
           protocol: TCP
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: registry
+    namespace: demo
+  name: registry
+spec:
+  selector:
+    namespace: demo
+    app: registry
+  ports:
+  - name: default
+    protocol: TCP
+    port: 5000
+    targetPort: http
 
