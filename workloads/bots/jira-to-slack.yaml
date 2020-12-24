@@ -49,7 +49,7 @@ spec:
   ports:
   - port: 8080
     protocol: TCP
-    targetPort: 8080
+    targetPort: 4080
   selector:
     app: jirabot
   sessionAffinity: None
