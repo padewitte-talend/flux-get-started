@@ -39,18 +39,18 @@ spec:
           value: "U01EXT4T5HA"
         - name: TPSVC_INITIAL_USERSID_LIST
           value: "U01EXT4T5HA"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: jirabot-lb
-  namespace: demo
-spec:
-  ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 4080
-  selector:
-    app: jirabot
-  sessionAffinity: None
-  type: LoadBalancer
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: jirabot-lb
+#   namespace: demo
+# spec:
+#   ports:
+#   - port: 8080
+#     protocol: TCP
+#     targetPort: 8080
+#   selector:
+#     app: jirabot
+#   sessionAffinity: None
+#   type: LoadBalancer
